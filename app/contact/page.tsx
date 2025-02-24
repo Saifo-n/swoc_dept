@@ -90,21 +90,21 @@ const ContactPage: React.FC = () => {
             </section>
 
             {isModalOpen && (
-                <div
-                    className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50"
-                    onClick={() => setIsModalOpen(false)}
-                >
-                    <div className="relative max-w-3xl max-h-[80vh]">
-                        <Image
-                            src="/images/RID_Samsen_Map-TH.png"
-                            alt="แผนที่ กรมชลประทาน สามเสน"
-                            width={1024}
-                            height={768}
-                            className="w-full h-auto rounded-lg shadow-lg"
-                        />
-                    </div>
-
-                </div>
+          <div
+          className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50"
+          onClick={() => setIsModalOpen(false)}
+      >
+          <div className="relative w-[60vw] max-w-2xl bg-white p-4 rounded-lg shadow-lg">
+              <Image
+                  src="/images/RID_Samsen_Map-TH.png"
+                  alt="แผนที่ กรมชลประทาน สามเสน"
+                  width={800}  // ✅ ลดขนาดลง
+                  height={600}
+                  className="w-full h-auto rounded-lg"
+              />
+          </div>
+      </div>
+    
             )}
         </>
     );
